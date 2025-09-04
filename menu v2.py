@@ -1,4 +1,4 @@
-# 1) Listar
+# 1) listagem
 
 manifestacoes =[]
 print("Lista de manifestações")
@@ -6,14 +6,14 @@ while True:
     print(f'\n1) Listar \n2) Adicionar \n3) Pesquisar manifestações \n4) Remover manifestações \n5) Substituir manifestações \n6) Sair')
 
     opcao = int(input("Digite a opção: "))
-    listar = 0
+    listagem = 0
 
     if opcao == 1:
         if len(manifestacoes) > 0:
             print(f'\nLista de manifestações')
             for item in manifestacoes:
-                listar = listar + 1
-                print(f'{listar} - {item}')
+                listagem = listagem + 1
+                print(f'{listagem} - {item}')
         else:
             print(f'Não há manifestações a serem listadas!')
 
@@ -32,11 +32,11 @@ while True:
     elif opcao == 4:
         codigo = int(input(f'Digite o código da manifestação que deseja remover: '))
         if codigo > 0 and codigo <= len(manifestacoes) :
-            confirmar = int(input(f'Deseja remover "{manifestacoes[codigo - 1]}"? 1- Sim 2- Não: '))
-            if confirmar == 1:
+            confirmacao = int(input(f'Deseja remover "{manifestacoes[codigo - 1]}"? 1- Sim 2- Não: '))
+            if confirmacao == 1:
                 manifestacoes.pop(codigo-1)
                 print(f'Manifestação removida com sucesso.')
-            elif confirmar == 2:
+            elif confirmacao == 2:
                 print(f'Manifestação não foi removida!')
             else:
                 print(f'Opção inválida!')
@@ -46,11 +46,11 @@ while True:
     elif opcao == 5:
         codigo = int(input(f'Digite o código da manifestação que deseja substituir: '))
         if codigo > 0 and codigo <= len(manifestacoes):
-            confirmar = int(input(f'Deseja substituir "{manifestacoes[codigo - 1]}"? 1- Sim 2- Não: '))
-            if confirmar == 1:
+            confirmacao = int(input(f'Deseja substituir "{manifestacoes[codigo - 1]}"? 1- Sim 2- Não: '))
+            if confirmacao == 1:
                 manifestacoes[codigo - 1] = input(f'Digite a manifestação que irá substituir: ').capitalize()
                 print(f'Manifestação substituído com sucesso.')
-            elif confirmar == 2:
+            elif confirmacao == 2:
                 print(f'Manifestação não foi removida!')
             else:
                 print(f'Opção inválida!')
@@ -62,6 +62,5 @@ while True:
 
     else:
         print(f'\nOpção inválida!')
-
 
 print(f'Obrigado por utilizar!')
