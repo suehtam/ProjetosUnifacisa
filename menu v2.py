@@ -25,7 +25,7 @@ while True:
     elif opcao == 3:
         codigo = int(input(f'Digite o código da manifestação: '))
         if codigo > 0 and codigo <= len(manifestacoes):
-            print(f'A manifestação pesquisada é {manifestacoes[codigo - 1]}.')
+            print(f'A manifestação pesquisada é: {manifestacoes[codigo - 1]}.')
         else:
             print(f'A manifestação não existe!')
 
@@ -62,5 +62,6 @@ while True:
 
     else:
         print(f'\nOpção inválida!')
+
 
 print(f'Obrigado por utilizar!')
