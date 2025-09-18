@@ -1,8 +1,8 @@
 # 1) listagem
-from turtledemo.rosette import mn_eck
+#from turtledemo.rosette import mn_eck
 
 from operacoesbd import *
-from ouvidoria import *
+from Funcoes import *
 
 conn = criarConexao('127.0.0.1', 'root', 'admin', 'gestao_ouvidoria')
 manifestacoes =[]
@@ -13,19 +13,19 @@ while True:
     opcao = int(input("Digite a opção: "))
 
     if opcao == 1:
-        listaDeManifestacoes(manifestacoes)
+        listarManifestacoes(conn)
 
     elif opcao == 2:
-        adicionarManifestacao(manifestacoes)
+        adicionarManifestacao(conn)
 
     elif opcao == 3:
-        pesquisarManifestacoes(manifestacoes)
+        pesquisarManifestacoes(conn)
 
     elif opcao == 4:
-        removerManifestacoes(manifestacoes)
+        removerManifestacoes(conn)
 
     elif opcao == 5:
-        substituirManifestacoes(manifestacoes)
+        substituirManifestacoes(conn)
 
     elif opcao == 6:
         break

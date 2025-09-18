@@ -1,6 +1,6 @@
 from operacoesbd import *
 
-def listaDeManifestacoes(conn):
+def listarManifestacoes(conn):
     print(f'\nLista de manifestações')
     consulta = "select * from ouvidoriaBD;"
     manifestacoes = listarBancoDados(conn, consulta)
