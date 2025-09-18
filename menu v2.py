@@ -2,7 +2,7 @@
 #from turtledemo.rosette import mn_eck
 
 from operacoesbd import *
-from Funcoes import *
+from ouvidoria import *
 
 conn = criarConexao('127.0.0.1', 'root', 'admin', 'gestao_ouvidoria')
 manifestacoes =[]
