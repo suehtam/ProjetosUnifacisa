@@ -1,0 +1,10 @@
+create table ouvidoriaBD
+(
+	codigo int auto_increment, 
+    nome varchar(50),
+    assunto varchar(50),
+    manifestacao varchar(100),
+    respondente varchar(100),
+    tipo varchar(50),
+    primary key(codigo)
+)
